@@ -1,0 +1,139 @@
+.header-tile-left {
+  float: left;
+  padding: 2px;
+  margin-left: 10px;
+  text-align: left;
+  color: #000000;
+  font-size: 20px;
+}
+
+.myLineDiv {
+  position: relative;
+  background: #1a252f;
+  margin-right: 2px;
+  width: 540px;
+  height: 250px; /*Control the extended list height upon click tab */
+  /* border: solid 1px #fff;       */
+  justify-content: flex-start; 
+}
+
+.myRadioPlanDiv {    
+    width: 1000px;
+    height: 650px;
+    margin-right: 2px; 
+  background-color: #1a252f;
+  border: solid 1px #fff;  
+  padding: 4px; 
+  justify-content: flex-start;
+}
+
+ #paletteDiv { 
+  width: 540px;
+  height: 650px; 
+  margin-right: 2px;
+  background-color: #1a252f;
+  border: solid 1px #fff;      
+  justify-content: flex-start;
+}
+
+#diagramTd { 
+  width: 1000px;
+  height: 650px;
+  padding: 4px; 
+  margin-right: 2px; 
+  background-color: #1a252f;
+  /* border: solid 1px #fff;       */
+  justify-content: flex-start;
+}
+
+/* Accordion styles */
+.rvd-tabs {
+  overflow: hidden; 
+  color: #1F4963;
+}
+.rvd-tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.rvd-tab-label {   
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  background: #1F4963;
+  cursor: pointer;
+  margin-bottom: 0em;
+}
+
+.rvd-tab-label-name { 
+  margin-right: auto;  } /*To Align the NAME @ LEFT END and +Button and '>' on LEFT END*/
+
+
+.rvd-tab-label:hover {
+  background: #627f91;
+}
+.rvd-tab-label::after {   
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.rvd-tab-content {
+  max-height: 0;
+  color: #313D4A;
+  background:#313D4A;   
+}
+.rvd-tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.rvd-tab-close:hover {
+  background: #1a252f;
+}
+
+input:checked + .rvd-tab-label {
+  /* background: #1a252f; */
+  background: #627f91;
+}
+input:checked + .rvd-tab-label::after {
+  transform: rotate(90deg);
+}
+/* text-align: right; */
+
+input:checked ~ .rvd-tab-content {
+  max-height: 100vh;  
+}
+
+ /* display: flex; Enable flexbox for horizontal alignment */
+/*   flex-wrap: wrap;  Allow items to wrap if they exceed the container width */
+/*   margin-right: 10px;  Adjust spacing between items as needed */   
+
+input {
+  position: absolute;
+  z-index: -1;
+}
+
+  /* Buttton style */
+  .mat-success {
+    background-color: #46B67B;
+    color: #fff;
+  }
+  
+  .mat-stroked-button {
+    margin: 20px;
+  }
+  
+  .save-button {
+    margin-left: 100px;
+  }
+  
+  .mic-stop-color {
+    color: #627f91;
+  }
+
+  
