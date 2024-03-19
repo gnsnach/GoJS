@@ -1,0 +1,34 @@
+<div>
+    <script src="go-debug.js"></script>
+    <div class="header-tile-left"> RADIO PLAN </div>
+    <table style="width:100%">
+        <tr>
+            <th rowspan="4">
+                <div id="paletteDiv">
+                    <div class="rvd-tabs" *ngFor="let radio of presRadioArray">
+                        <div class="rvd-tab">
+                            <input type="radio" id="{{ radio.name }}" name="rd" />
+                            <label class="rvd-tab-label" for="{{ radio.name }}">
+                                <div class="rvd-tab-label-name">{{ radio.name }}</div>
+                            </label>
+                            <div class="rvd-tab-content">
+                                <gojs-palette #line [initPalette]="initPalette" [divClassName]="paletteDivClassName"
+                                    [nodeDataArray]="filteredData" [modelData]="state.lineModelData">
+                                </gojs-palette>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </th>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <div id="diagramTd">
+                    <gojs-diagram #radioPlan [initDiagram]="initDiagram" [nodeDataArray]="diagramNodeData"
+                        [divClassName]="diagramDivClassName" [modelData]="state.radioPlanModelData"></gojs-diagram>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
